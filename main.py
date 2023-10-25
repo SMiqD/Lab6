@@ -1,4 +1,4 @@
-
+# Syed Miqdad
 def encode():
     user_input = input("What is your password?")
     encoded_password = ""
