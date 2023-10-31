@@ -17,6 +17,24 @@ def encode(user_input):
             encoded_password += i
     return encoded_password
 
+#Nafi
+def decode(encodedpassword):
+    decoded_password = ""
+    for i in encodedpassword:
+        i = int(i)
+        if 0 <= i <= 2:
+            if i == 0:
+                i = "7"
+            if i == 1:
+                i = "8"
+            if i == 2:
+                i = "9"
+            decoded_password += i
+        else:
+            i -= 3
+            i = str(i)
+            decoded_password += i
+    return decoded_password
 
 def main():
     condition = True
@@ -34,8 +52,10 @@ def main():
                 print("Your password has been encoded and stored!")
             else:
                 print("Create an 8 digit password.")
-        #if menu_input == "2":
-            # decoded function
+        elif menu_input == "2":
+            print(f"Encoded password {encoded_password} and Decoded password {decode(encoded_password)}")
+        elif menu_input == "3":
+            condition = False
 
 
 if __name__ == "__main__":
