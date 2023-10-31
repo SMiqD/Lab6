@@ -35,7 +35,7 @@ def main():
             else:
                 print("Create an 8 digit password.")
         if menu_input == "2":
-            print(encoded_password)
+            #decoded function
 
 
 if __name__ == "__main__":
